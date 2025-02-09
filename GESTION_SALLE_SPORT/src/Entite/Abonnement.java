@@ -8,7 +8,6 @@ package Entite;
  *
  * @author abdou-jabar
  */
-@SuppressWarnings("unused")
 public class Abonnement {
     
     private String id;
@@ -16,13 +15,13 @@ public class Abonnement {
     private int dureeMois;
     private float prixMensuel;
     
-    private Abonnement(){}
+    public Abonnement(){}
     
-    private Abonnement(String id){
+    public Abonnement(String id){
         this.id = id;
     }
     
-    private Abonnement(String id, String libelle, int dureeMois, float prixMensuel){
+    public Abonnement(String id, String libelle, int dureeMois, float prixMensuel){
         this.id = id;
         this.libelle = libelle;
         this.dureeMois = dureeMois;

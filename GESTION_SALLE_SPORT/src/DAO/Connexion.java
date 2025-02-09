@@ -30,8 +30,4 @@ public class Connexion {
         return con;
         
     }
-    
-    public static void main(String[] args) {
-        Connect();
-    }
 }

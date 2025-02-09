@@ -4,20 +4,19 @@
  */
 package Entite;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  *
  * @author abdou-jabar
  */
-@SuppressWarnings("unused")
 public class Abonne {
     
     private String id;
     private String nom;
     private String prenom;
     private String numero;
-    private Date dateInscription;
+    private LocalDate dateInscription;
     private boolean statutSouscription;
     
     public Abonne(){}
@@ -26,7 +25,14 @@ public class Abonne {
         this.id = id;
     }
     
-    public Abonne(String id, String nom, String prenom, String numero, Date dateInscription, boolean statutSouscription){
+    public Abonne(String id, String nom, String prenom, String numero){
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.numero = numero;
+    }
+    
+    public Abonne(String id, String nom, String prenom, String numero, LocalDate dateInscription , boolean statutSouscription){
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -51,11 +57,11 @@ public class Abonne {
         return numero;
     }
 
-    public Date getDateInscription() {
+    public LocalDate getDateInscription() {
         return dateInscription;
     }
 
-    public boolean isStatutSouscription() {
+    public boolean getStatutSouscription() {
         return statutSouscription;
     }
 
@@ -75,14 +81,16 @@ public class Abonne {
         this.numero = numero;
     }
 
-    public void setDateInscription(Date dateInscription) {
-        this.dateInscription = dateInscription;
-    }
-
     public void setStatutSouscription(boolean statutSouscription) {
         this.statutSouscription = statutSouscription;
     }
 
+    public void setDateInscription(LocalDate dateInscription) {
+        this.dateInscription = dateInscription;
+    }
+    
+
+    
     @Override
     public String toString() {
         return "Abonne{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", numero=" + numero + ", dateInscription=" + dateInscription + ", statutSouscription=" + statutSouscription + '}';
